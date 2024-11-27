@@ -1,0 +1,179 @@
+@font-face {
+  font-family: 'Hey' ;
+  src: url(../fonts/hey-comic.otf);
+  font-weight: regular;
+  font-style: regular;
+}
+@font-face {
+  font-family: 'Super-Squad' ;
+  src: url(../fonts/super-squad.otf);
+  font-weight: regular;
+  font-style: regular;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #FFFF00;
+  width: 1350px;
+  height: 100vh;
+  margin: auto;
+  display: block;
+  /* border: 1px solid black; */
+}
+section{
+  position: relative;
+}
+article{
+  display: flex;
+  flex-direction: column;
+  width: 1350px;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+article > h1{
+  font-family: 'Super-Squad';
+  font-size: 10em;
+  text-align: center;
+}
+article > img{
+  width: 55%;
+  margin-top: -70px;
+}
+article > p{
+  font-family:'Hey';
+  width: 45%;
+  text-align: center;
+  margin-top: 10px;
+}
+.logo-creative1{
+  width: 180px;
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translatey(-50%);
+}
+.logo-creative2{
+  width: 180px;
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translatey(-50%);
+}
+.slider{
+  display: flex;
+  width: 1350px ;
+  height: 375px;
+  margin-top: 25px;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 10%, rgba(0, 0, 0, 0.8) 25%, #000 75%, rgba(0, 0, 0, 0.8) 85%, transparent 95%);
+
+  /* border: 1px red solid; */
+}
+
+.slider ul{
+  --quantity: 9;
+  --time:18s;
+  display: flex;
+  width: 30%;
+  position: relative;
+  min-width: calc(250px * var(--quantity));
+  
+}
+@keyframes AutoRun {
+  to{
+    left: -250px;
+  }
+}
+.slider ul li{
+  width: 350px;
+  position: absolute;
+  left: 100%;
+  list-style: none;
+  animation: AutoRun var(--time) linear infinite;
+  transition: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  animation-delay: calc(var(--time) / var(--quantity) * (var(--index) - 1) - var(--time));
+}
+.slider ul li img{
+  width: 250px;
+  filter: grayscale(1) !important;
+}
+.slider:hover li{
+  animation-play-state: paused !important;
+}
+.slider img:hover{
+  filter: grayscale(0) !important;
+}
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 45px;
+  height: 60px;
+  padding: 0px 50px;
+  border-top: #000 dashed 1px;
+  & p{
+    text-align: center;
+    font-family:'Hey';
+    color: #000;
+  }
+  & a{
+    font-family: 'Super-Squad';
+  }
+  & a:hover{
+    cursor: pointer;
+    text-decoration: underline; 
+    color: red;
+  }
+}
+@media screen and (max-width: 1349px) {
+  body {
+    width: 100%;
+  }
+  & article{
+    width: 100%;
+  }
+  & .slider{
+    width: 100% ;
+  }
+}
+@media screen and (max-width: 931px) {
+  article > h1{
+    font-size: 5em;
+    line-height: 1.3em;
+  }
+  & article > img{
+    width: 55%;
+    margin-top: -30px;
+  }
+  & section {
+    width: 100%;
+  }
+  & .logo-creative1{
+    display: none;
+  }
+  & .logo-creative2{
+    width: 300px;
+    position: relative;
+    top: 10px;
+    display: block;
+    margin: auto;
+    right: 0px; 
+    transform: translatey(0);
+    margin-bottom: 20px;
+  }
+  & article > p{
+    width: 60%;
+  }
+}
+@media screen and (max-width: 515px){
+  article > img{
+    width: 75%;
+  }
+  & footer{
+    height: 150px;
+  }
+}
