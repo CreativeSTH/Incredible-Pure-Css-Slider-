@@ -105,9 +105,82 @@ Y walaaaaaaa que conseguimos con esto, mantener los elementos del slider en form
 <br><br>
 En esta punto podemos ajustar el alto de nuestro slider para evitar el espacio vacío o agregar una linea más de código para hacer que el slider se expanda y se ajuste a la suma del ancho de todas las imagenes y de esta manera se no quede un espacio vacío en nuestro slider, te explico esto por que es importante: si te fijas e inspeccionamos mi ejercicio, las imágenes no tienen exactamente la medida que les dimos que es 150px * 220px 
 <div align="center">
-  <img src="/assets/img/readme/3.png"/>
+  <img src="/assets/img/readme/4.png"/>
 </div>
 <br><br>
+
+La razon es por que el tamaño de la lista o de mi slider no es lo suficiente para contener los elementos, por lo que se acomodan para poder ocupar el tamaño del slide podemos agregar una linea de código para solucionar esto y hacer que el slider empiece a ser dinámico,
+agregando una nueva variable -quantity, la cual vamos a utilizar para contar cuantos elementos va a contener el slider, en mi caso voy a mostrar 9 imágenes.
+
+
+```css
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  --width:200px;
+  --height:300px;
+  --quantity: 9;
+}
+
+```
+Ahora simplemente calculamos la suma del ancho de todas las imágenes y le damos ese valor a nuestro slider de forma dinamica usando la propiedad  ```min-width ```  así
+
+```css
+ul{
+  display: flex;
+  list-style: none;
+  width: 1350px;
+  min-width: calc(var(--width) * var(--quantity));
+  height: var(--height);
+  border: 1px red solid;
+  overflow: hidden;
+}
+
+```
+
+Esto se entiende fácilmente, si el contenido de mi slider es menor de 1350px, pues acomoda el contenido a ese ancho, pero si el contenido es mayor que el slider, acomoda el slider calculando el ancho del total de los elementos. (ancho * cantidad), sencillo.<br><br>
+AHORA SIIIII podemos hacer magia, ya tenemos nuestro slider preparado y si te fijas más hemos hecho par de lineas de código solamente. y el slider lo vamos a crear con solo 1 linea más de código, para entender como funciona he preparado estas 2 imágenes <br><br>
+Utilizamos la propiedad  ```animation-delay```
+<div align="center">
+  <img src="/assets/img/readme/animationdelay.png"/>
+</div>
+
+Lo que va a hacer esta propiedad es darle un tiempo de espera a cada elemento del slider de forma individual y de esta manera hacemos que se muevan de forma independiente en la animación así.
+<div align="center">
+  <img src="/assets/img/readme/mesa1.png" width="45%"/>
+  <img src="/assets/img/readme/mesa2.png" width="45%"/>
+</div>
+En la gráfica, cada elemento tiene un tiempo de delay independiente, esto hace que cada uno se desplace 1 segundo despues que el otro pero una vez finalice la animación, nuevamente el elemento 1 se va a mostrar en el slider evitando los espacios en blanco y generando el efecto 360 que queríamos al principio, pero esto lo vamos a hacer de manera dinámica sólo usando el poder de CSS3 moderno.<br><br>
+
+Para lograrlo vamos a darle un index o id a cada elemento de nuestro slider desde el html, utilizando la etiqueta  ```<style></style> ``` así:
+
+```html
+    <li style="--index: 1;"><img src="img/1.jpg"></li>
+    <li style="--index: 2;"><img src="img/2.jpg"></li>
+    <li style="--index: 3;"><img src="img/3.jpg"></li>
+    <li style="--index: 4;"><img src="img/4.jpg"></li>
+    <li style="--index: 5;"><img src="img/5.jpg"></li>
+    <li style="--index: 6;"><img src="img/6.jpg"></li>
+    <li style="--index: 7;"><img src="img/7.jpg"></li>
+    <li style="--index: 8;"><img src="img/8.jpg"></li>
+    <li style="--index: 9;"><img src="img/9.jpg"></li>
+
+```
+
+Ahora cada elemento tiene un valor de index intependiente que podemos utilizar para calcular de manera dinámica la animación que vamos a crear, pero antes debemos agregar un   ```left:100%``` a cada uno de los elementos del slider, esto podemos hacerlo por que recordemos que nuestros elementos son absolutos ahora y de esta manera los movemos hacia la derecha y hacemos que salgan de nuestro slider para que podamos ahora con la animación empezar a moverlos uno por uno hacia la derecha. y por último ahora si agregamos la animación de esta manera y ya les explico el código
+
+```css
+   li{
+    width: var(--width) ;
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: AutoRun  infinite linear var(--time);
+    animation-delay: calc(var(--time) / var(--quantity) * (var(--index) - 1) - var(--time));
+  }
+
+```
 
 
  
