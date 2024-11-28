@@ -171,6 +171,23 @@ Para lograrlo vamos a darle un index o id a cada elemento de nuestro slider desd
 Ahora cada elemento tiene un valor de index intependiente que podemos utilizar para calcular de manera dinámica la animación que vamos a crear, pero antes debemos agregar un   ```left:100%``` a cada uno de los elementos del slider, esto podemos hacerlo por que recordemos que nuestros elementos son absolutos ahora y de esta manera los movemos hacia la derecha y hacemos que salgan de nuestro slider para que podamos ahora con la animación empezar a moverlos uno por uno hacia la derecha. y por último ahora si agregamos la animación de esta manera y ya les explico el código
 
 ```css
+  li{
+    width: var(--width) ;
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: AutoRun  infinite linear var(--time);
+    animation-delay: calc(var(--time) / var(--quantity) * (var(--index) - 1));
+  }
+
+```
+Como lo puedes haber notado he agregado una nueva variable, que va a ser el tiempo de ejecución de mi animacion, en mi caso son 9s entonces la formula calcula el: tiempo/cantidad osea que sería 1 segundo para cada elemento 9/9=1 y esto lo multiplicamos por el index del elemento - 1, es decir si es el index 1 =>  ``` 1-1= 0 ```    y al multiplicar   ```1 * 0 = 0```  nos da el delay dinamico para el elemento 1, luego calcula el siguiente index 2 =>   ```2-1= 1 ```  y al multiplicar  ```1 * 1= 1```  entonces el delay dinamico para el elemento 2 es 1 y así sucesivamente y el resultado es este:
+video----------------------------------------------
+
+Walaaaaaaa conseguimos el efecto 360 que queriamos!!! ahora tenemos un slider, aunque al inicio seguimos teniendo un espacio en blanco, eso lo podemos corregir agregandole una última parámetro a la formula del delay, con esto lo que vamos a conseguir es adelantarnos al tiempo y que nuestro slider inicie como si ya hubiera pasado la primera ronda de animación! así, restamos al final el tiempo de animación
+
+
+```css
    li{
     width: var(--width) ;
     height: var(--height);
@@ -181,8 +198,7 @@ Ahora cada elemento tiene un valor de index intependiente que podemos utilizar p
   }
 
 ```
-
-
+Por fín ya tenemos el ejercicio finalizado.
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
