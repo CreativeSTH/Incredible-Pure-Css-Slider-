@@ -6,7 +6,7 @@
   <h3 align="center">Vanilla CSS3 y HTML | Incredible Pure Css Slider</h3>
 
   <p align="center">
-    PURE CSS SLIDER, Sin una sola línea de JavaScript, hemos creado una experiencia visual impresionante utilizando solo CSS moderno con variables y la propiedad cal() para hacerlo mas dinámico.
+    PURE CSS SLIDER, Sin una sola línea de JavaScript, hemos creado una experiencia visual impresionante utilizando solo CSS moderno con variables y la propiedad cal() para ejecutar algunas funciones y hacerlo dinámico.
     <br />
     <a href="https://creativesth.github.io/Incredible-Pure-Css-Slider-/"><strong>Demo »</strong></a>
     <br />
