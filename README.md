@@ -29,7 +29,7 @@
 
 <br>
 <br>
-Para realizar el ejercicio cree una lista desordenada que contiene 9 items, los posicione de manera horizontal, agregando un par de estilos básicos a mi elemento ul así border: 1px red solid; además display: flex; list-style: none; y por último le voy a dar un ancho predeterminado a mi slider width; 1350px; 
+Para realizar el ejercicio creé una lista desordenada que contiene 9 items, los posicione de manera horizontal, agregando un par de estilos básicos a mi elemento ul así border: 1px red solid; además display: flex; list-style: none; y por último le voy a dar un ancho predeterminado a mi slider width; 1350px; 
 <div align="center">
   <img src="/assets/img/readme/1.png"/>
 </div>
@@ -62,17 +62,52 @@ Por lo que aunque estamos utilizando contenido estático, el slider debe ser din
 <br><br>
 Pero…. estamos trabajando con el poder de CSS3 moderno! aún tenemos un as bajo la manga, aquí es donde empieza la magia.<br>
 Hagamos lo siguiente, vamos a separar los elementos de mi slider posicionandolos de manera absoluta cada uno<br>
-```console
-<style>
- li img{
+
+```css
+li img {
     position: absolute;
     width: 200px;
 }
-</style>
 ```
 
+esto hará que mis imágenes se monten una encima de la otra, por ahora, pero lo importante es que las separamos posicionando cada una de manera obsoluta para poder aplicarles luego la magia. Para ubicarlas de manera horizontal una al lado de la otra nuevamente vamos a jugar con el ancho de cada imagen y el del slider, restableciendo 2 variables   --width y --height
+
+```css
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  --width:150px;
+  --height:220px;
+}
+
+```
+
+y esas variables las vamos a utilizar para otorgarle tamañno a mi  ```<li></li> ```  y ahora si vamos a cambiar tambien el tamaño de cada imagen que anteriormente le habia puesto 200px, lo vamos a cambiar a 100% para que se acomode al tamaño que le hemos dado a su contenedor  ```<li></li> ```
 
 
+```css
+li{
+    position: relative;
+    width: var(--width) ;
+    height: var(--height);
+    animation: AutoRun  infinite linear 9s;
+  }& img {
+    position: absolute;
+    width: 100%;
+}
+```
+
+Y walaaaaaaa que conseguimos con esto, mantener los elementos del slider en formato horizontal pero aun más importante cada uno de ellos ahora está posicionado absolutamente ocupando el total de nuestro slider y vamos a poder manipular cada uno de ellos de forma más sencilla, ahora es cuando la magia ocuerre...
+<div align="center">
+  <img src="/assets/img/readme/3.png"/>
+</div>
+<br><br>
+En esta punto podemos ajustar el alto de nuestro slider para evitar el espacio vacío o agregar una linea más de código para hacer que el slider se expanda y se ajuste a la suma del ancho de todas las imagenes y de esta manera se no quede un espacio vacío en nuestro slider, te explico esto por que es importante: si te fijas e inspeccionamos mi ejercicio, las imágenes no tienen exactamente la medida que les dimos que es 150px * 220px 
+<div align="center">
+  <img src="/assets/img/readme/3.png"/>
+</div>
+<br><br>
 
 
  
