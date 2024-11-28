@@ -26,10 +26,13 @@
 <div align="center">
   <img src="/assets/img/readme/ejemplo1.gif"/>
 </div>
+<br>
+<br>
 Para realizar el ejercicio cree una lista desordenada, que contiene 9 items los posicione de manera horizontal, para ello agregaré un par de estilos básicos a mi elemento <ul> así: border: 1px red solid; además display: flex; list-style: none; y por último le voy a dar un ancho predeterminado a mi slider width; 1350px; 
 <div align="center">
   <img src="/assets/img/readme/2.png"/>
 </div>
+<br><br>
 Básico, le di un tamaño de momento a las imagenes de mi lista, solo por ahora ya mas adelante se daran cuenta que lo cambiamos pero por ahora les doy un width; 200px; y señalo el border en la capatura para que tengamos en cuenta el ancho maximo que le hemos dado anteriormente al slider y obviamente tenemos que agregar un overflow: hidden; para apreciarlo mejor y lo que vamos a hacer. 
 
 <div align="center">
