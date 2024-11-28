@@ -15,12 +15,24 @@
   </p>
 </div>
 
+<!-- Table of Contents -->
+# :notebook_with_decorative_cover: TABLA DE CONTENIDOS
+
+- [Explicación del ejercicio](#explication)
+  * [¿Como funciona?](#ejemplo)
+  * [Preparando mi Slider](#preparando)
+  * [Animation-delay](#delay)
+  * [Resultado final](#resultado)
+- [Estilos adicionales](#adicionales)
+
+
+
   <!-- ABOUT THE PROJECT -->
-<div align="center">
+<div align="center" id="explication">
   <img src="https://user-images.githubusercontent.com/74038190/216122041-518ac897-8d92-4c6b-9b3f-ca01dcaf38ee.png" alt="Fire" width="120" />
 </div>
 
-## EXPLICACIÓN DEL EJERCICIO
+## :space_invader: EXPLICACIÓN DEL EJERCICIO
 
 👽Lo primero que debemos entender en este ejercicio es que la idea principal es crear una animación en la que cada uno de los elementos del slider se desplace de derecha a izquierda.
 <div align="center">
@@ -44,7 +56,7 @@ También le di un tamaño de "momento" a las imagenes de mi lista, solo por ahor
 <br>
 <br>
 Ahora analicemos esto, lo fácil podriamos pensar, si mi slider tiene un ancho total de 1350px, voy a desplazar todos mis imganeges en forma negativa desde -1350px hasta 1350px así provocamos que todos los elementos se muestren en el desplazamiento y agregamos el atributo infinite a nuestra animación para que se repita en bucle y lo logramos!, pues… ¿si funcionará? veamos el resultado.
-<div align="center">
+<div align="center" id="ejemplo">
   <img src="/assets/img/readme/ejemplo2.gif"/>
 </div>
 
@@ -61,7 +73,7 @@ El primero es que se generan espacios en blanco en nuestro slider mientras inici
 Por lo que aunque estamos utilizando contenido estático, el slider debe ser dinámico en cierto sentido y "esta es la razón por la que siempre todos utilizamos javaScript para crear un slider en vez de usar CSS".
 <br><br>
 Pero…. estamos trabajando con el poder de CSS3 moderno! aún tenemos un as bajo la manga, aquí es donde empieza la magia.<br>
-Hagamos lo siguiente, vamos a separar los elementos de mi slider posicionandolos de manera absoluta cada uno<br>
+<p id="preparando">Hagamos lo siguiente, vamos a separar los elementos de mi slider posicionandolos de manera absoluta cada uno</p><br>
 
 ```css
 li img {
@@ -142,7 +154,7 @@ ul{
 Esto se entiende fácilmente, si el contenido de mi slider es menor de 1350px, pues acomoda el contenido a ese ancho, pero si el contenido es mayor que el slider, acomoda el slider calculando el ancho del total de los elementos. (ancho * cantidad), sencillo.<br><br>
 AHORA SIIIII podemos hacer magia, ya tenemos nuestro slider preparado y si te fijas más hemos hecho par de lineas de código solamente. y el slider lo vamos a crear con solo 1 linea más de código, para entender como funciona he preparado estas 2 imágenes <br><br>
 Utilizamos la propiedad  ```animation-delay```
-<div align="center">
+<div align="center" id="delay">
   <img src="/assets/img/readme/animationdelay.png"/>
 </div>
 
@@ -182,7 +194,9 @@ Ahora cada elemento tiene un valor de index intependiente que podemos utilizar p
 
 ```
 Como lo puedes haber notado he agregado una nueva variable, que va a ser el tiempo de ejecución de mi animacion, en mi caso son 9s entonces la formula calcula el: tiempo/cantidad osea que sería 1 segundo para cada elemento 9/9=1 y esto lo multiplicamos por el index del elemento - 1, es decir si es el index 1 =>  ``` 1-1= 0 ```    y al multiplicar   ```1 * 0 = 0```  nos da el delay dinamico para el elemento 1, luego calcula el siguiente index 2 =>   ```2-1= 1 ```  y al multiplicar  ```1 * 1= 1```  entonces el delay dinamico para el elemento 2 es 1 y así sucesivamente y el resultado es este:
-video----------------------------------------------
+<div align="center">
+  <img src="/assets/img/readme/ejemplo3.gif"/>
+</div>
 
 Walaaaaaaa conseguimos el efecto 360 que queriamos!!! ahora tenemos un slider, aunque al inicio seguimos teniendo un espacio en blanco, eso lo podemos corregir agregandole una última parámetro a la formula del delay, con esto lo que vamos a conseguir es adelantarnos al tiempo y que nuestro slider inicie como si ya hubiera pasado la primera ronda de animación! así, restamos al final el tiempo de animación
 
@@ -198,7 +212,23 @@ Walaaaaaaa conseguimos el efecto 360 que queriamos!!! ahora tenemos un slider, a
   }
 
 ```
-Por fín ya tenemos el ejercicio finalizado.
- 
+Por fín ya tenemos el ejercicio finalizado si recargamos la página nunca vemos espacios en blaco!!!.
+<div align="center" id="resultado">
+  <img src="/assets/img/readme/ejemplo4.gif"/>
+</div>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Ajustes Adicionales -->
+### :camera: ESTILOS ADICIONALES 
+ <p id="adicionales">Ya sabes como crear tu propio slider usando solo CSS3 pero en el demo que he diseñado para este ejercicio, le agregué un par de efectos adicionales y también quiero enseñartelos</p>
+ 1.DETENER LA ANIMACIÓN:<br>
+ simplemente un animation-play-state: paused !important;<br><br>
+
+ 2.TRANSPARENCIA EN EL SLIDER<br>
+Agregamos una mascara con un degradado de 3 puntos, al inicio transparente, en el medio negro y al finalizar transparente nuevamente, así 
+
+```css
+  mask-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.8), transparent);
+```
+
 
