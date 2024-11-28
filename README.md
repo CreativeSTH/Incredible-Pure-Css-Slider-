@@ -51,16 +51,26 @@ Ahora analicemos esto, lo fácil podriamos pensar, si mi slider tiene un ancho t
 <br>
 <br>
 No era el resultado que esperábamos ¿cierto? y es que no tuvimos en cuenta varios factores.<br>
-El primero es que se generan espacios en blanco en nuestro slider mientras inicia y finaliza la animación, en vez de que se genere un efecto 360 donde después del último se muestra nuevamente el primero y así sucesivamente.Pero además;<br>
-La animación como tal no parece ir fluida por que entran en juegos 3 factores básicos en un slider que no tuvimos en cuenta:
+El primero es que se generan espacios en blanco en nuestro slider mientras inicia y finaliza la animación, en vez de que se genere un efecto 360 donde después del último se muestra nuevamente el primero y así sucesivamente. Pero además, la animación como tal no parece ir fluida por que entran en juegos 3 factores básicos en un slider que no tuvimos en cuenta:<br>
 <ul>
   <li>Tiempo de duración de la animación. </li>
   <li>Cantidad de objetos que van a recorrer en la animación durante ese tiempo.</li>
   <li>El ancho de cada objeto para calcular la distancia del recorrido.
 </li>
 </ul><br>
-Por lo que aunque estamos utilizando contenido estático, el slider debe ser dinámico en cierto sentido y "esta es la razón por la que siempre todos utilizamos javaScript para crear un slider en vez de usar CSS".<br>
-pero…. estamos trabajando con el poder de CSS3 moderno!, aún tenemos un as bajo la manga, aquí es donde empieza la magia.
+Por lo que aunque estamos utilizando contenido estático, el slider debe ser dinámico en cierto sentido y "esta es la razón por la que siempre todos utilizamos javaScript para crear un slider en vez de usar CSS".
+<br><br>
+Pero…. estamos trabajando con el poder de CSS3 moderno! aún tenemos un as bajo la manga, aquí es donde empieza la magia.<br>
+Hagamos lo siguiente, vamos a separar los elementos de mi slider posicionandolos de manera absoluta cada uno<br>
+```console
+<style>
+ li img{
+    position: absolute;
+    width: 200px;
+}
+</style>
+```
+
 
 
 
