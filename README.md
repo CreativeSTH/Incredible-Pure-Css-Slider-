@@ -26,16 +26,17 @@
 <div align="center">
   <img src="/assets/img/readme/ejemplo1.gif"/>
 </div>
-Para realizar el ejercicio cree una lista desordenada, que contiene 9 items los posicione de manera horizontal, para ello agregaré un par de estilos básicos a mi elemento <ul> así: border: 1px red solid; además display: flex; list-style: none; y por último le voy a dar un ancho predeterminado a mi slider
-width; 1350px; 
+Para realizar el ejercicio cree una lista desordenada, que contiene 9 items los posicione de manera horizontal, para ello agregaré un par de estilos básicos a mi elemento <ul> así: border: 1px red solid; además display: flex; list-style: none; y por último le voy a dar un ancho predeterminado a mi slider width; 1350px; 
 <div align="center">
   <img src="/assets/img/readme/2.png"/>
 </div>
-Básico, ahora le di un tamaño de momento a las imagenes de mi lista, solo por ahora ya mas adelante se daran cuenta que lo cambiamos pero por ahora les doy un width; 200px; y señalo el border en la capatura para que tengamos en cuenta el ancho maximo que le hemos dado anteriormente al slider y obviamente tenemos que agregar un overflow: hidden; para apreciarlo mejor y lo que vamos a hacer. 
+Básico, le di un tamaño de momento a las imagenes de mi lista, solo por ahora ya mas adelante se daran cuenta que lo cambiamos pero por ahora les doy un width; 200px; y señalo el border en la capatura para que tengamos en cuenta el ancho maximo que le hemos dado anteriormente al slider y obviamente tenemos que agregar un overflow: hidden; para apreciarlo mejor y lo que vamos a hacer. 
 
 <div align="center">
   <img src="/assets/img/readme/2.png"/>
 </div>
+<br>
+<br>
 Ahora analicemos esto, lo fácil podriamos pensar, si mi slider tiene un ancho total de 1350px, voy a desplazar todos mis imganeges en forma negativa desde -1350px hasta 1350px así provocamos que todos los elementos se muestren en el desplazamiento y agregamos el atributo infinite a nuestra animación para que se repita en bucle y lo logramos!, pues… ¿si funcionará? veamos el resultado.
 
 <div align="center">
