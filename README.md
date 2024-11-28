@@ -1,24 +1,18 @@
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="assets/img/logo.svg" alt="Logo" width="80" height="80">
+    <img src="assets/img/logo.svg" alt="Logo" width="280">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Vanilla CSS3 y HTML | Incredible Pure Css Slider</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    PURE CSS SLIDER, Sin una sola línea de JavaScript, hemos creado una experiencia visual impresionante utilizando solo CSS moderno con variables y la propiedad cal() para hacerlo mas dinámico.
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://creativesth.github.io/Incredible-Pure-Css-Slider-/"><strong>Demo »</strong></a>
     <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
-<h1 align="center">Vanilla CSS3 y HTML | Incredible Pure Css Slider</h1> 
+<h1 align="center"></h1> 
 <a href="https://creativesth.github.io/Incredible-Pure-Css-Slider-/">
   <img src="/assets/img/css.gif"
 </a>
