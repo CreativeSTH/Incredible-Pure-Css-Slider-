@@ -14,9 +14,6 @@
     <br />
   </p>
 </div>
-<a href="https://creativesth.github.io/Incredible-Pure-Css-Slider-/">
-  <img src="/assets/img/css.gif"
-</a>
 
   <!-- ABOUT THE PROJECT -->
 <div align="center">
@@ -29,6 +26,7 @@
 <div align="center">
   <img src="/assets/img/readme/ejemplo1.gif"/>
 </div>
+...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
