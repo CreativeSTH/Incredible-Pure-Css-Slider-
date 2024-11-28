@@ -17,10 +17,12 @@
 <a href="https://creativesth.github.io/Incredible-Pure-Css-Slider-/">
   <img src="/assets/img/css.gif"
 </a>
-<!-- ABOUT THE PROJECT -->
-## EXPLICACIÓN DEL EJERCICIO
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+  <!-- ABOUT THE PROJECT -->
+## EXPLICACIÓN DEL EJERCICIO
+NOTA: Explico el funcionamiento, para que puedas entender el código más fácil, puedas clonarlo, practicar y luego crear el tuyo propio <img src="https://user-images.githubusercontent.com/74038190/216122041-518ac897-8d92-4c6b-9b3f-ca01dcaf38ee.png" alt="Fire" width="120" />
+
+Lo primero que debemos entender en este ejercicio es que la idea principal es crear una animación en la que cada uno de los elementos del slider se desplace de derecha a izquierda.
 
 There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
