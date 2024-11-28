@@ -1,7 +1,7 @@
 <a id="readme-top"></a>
 <!-- PROJECT LOGO -->
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://www.linkedin.com/in/creativesth/">
     <img src="assets/img/logo.svg" alt="Logo" width="280">
   </a>
 
@@ -19,12 +19,16 @@
 </a>
 
   <!-- ABOUT THE PROJECT -->
-## EXPLICACIÓN DEL EJERCICIO
 <div align="center">
   <img src="https://user-images.githubusercontent.com/74038190/216122041-518ac897-8d92-4c6b-9b3f-ca01dcaf38ee.png" alt="Fire" width="120" />
 </div>
-👽Lo primero que debemos entender en este ejercicio es que la idea principal es crear una animación en la que cada uno de los elementos del slider se desplace de derecha a izquierda.
 
+## EXPLICACIÓN DEL EJERCICIO
+
+👽Lo primero que debemos entender en este ejercicio es que la idea principal es crear una animación en la que cada uno de los elementos del slider se desplace de derecha a izquierda.
+<div align="center">
+  <img src="/assets/img/readme/ejemplo1.gif"/>
+</div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
