@@ -121,12 +121,12 @@ footer{
     color: #000;
   }
   & a{
-    font-family: 'Super-Squad';
-  }
-  & a:hover{
-    cursor: pointer;
-    text-decoration: underline; 
     color: red;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  & :hover{
+    color: #000;
   }
 }
 @media screen and (max-width: 1349px) {
